@@ -5,7 +5,6 @@ import { LearnComponent } from './learn/learn';
 import { ProjectComponent } from './project/project';
 import { EducationComponent } from './education/education';
 import { SkillsComponent } from './skills/skills';
-import { WorkComponent } from './work/work';
 import { HeaderComponent } from '../components/header/header';
 import { FooterComponent } from '../components/footer/footer';
 
@@ -13,7 +12,7 @@ import { FooterComponent } from '../components/footer/footer';
 @Component({
   selector: 'app-profile',
   standalone: true, 
-  imports: [CommonModule, ContactComponent, LearnComponent, ProjectComponent, EducationComponent, SkillsComponent, WorkComponent,HeaderComponent, FooterComponent],
+  imports: [CommonModule, ContactComponent, LearnComponent, ProjectComponent, EducationComponent, SkillsComponent,HeaderComponent, FooterComponent],
   templateUrl: './profile.html',
   styleUrls: ['./profile.css']
 })
