@@ -1,0 +1,105 @@
+.tech-wrapper {
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.tech-title {
+  font-size: 28px;
+  color: #2C5F2D;
+  margin-bottom: 30px;
+}
+
+.tech-section {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}
+
+.tech-box {
+  position: absolute;
+  width: 180px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.tech-box h3 {
+  margin-top: 10px;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.tech-box li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.top-left    { top: 0; left: 0; }
+.top-right   { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right{ bottom: 0; right: 0; }
+.center      {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Sección extra */
+.tech-extra {
+  margin: 80px auto 0;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Colores pastel */
+.pastel-blue     { background-color: #d0ebff; }
+.pastel-orange   { background-color: #ffd6a5; }
+.pastel-yellow   { background-color: #fff3b0; }
+.pastel-green    { background-color: #b9fbc0; }
+.pastel-pink     { background-color: #ffcad4; }
+.pastel-lavender { background-color: #e0bbf7; }
+
+.tech-note {
+  font-size: 12px;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+/* ----------- Estrellas Hexagonales Animadas ----------- */
+
+.hexagon {
+  position: absolute;
+  width: 20px;
+  height: 17.32px; /* width * sqrt(3)/2 */
+  background-color: #e91e63;  /* rojo pastel */
+  opacity: 0.8;
+  clip-path: polygon(
+    25% 0%, 75% 0%, 
+    100% 50%, 75% 100%, 
+    25% 100%, 0% 50%
+  );
+  animation-name: fall-hex;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall-hex {
+  0% {
+    transform: translateY(-30px) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(850px) rotate(360deg);
+    opacity: 0;
+  }
+}
