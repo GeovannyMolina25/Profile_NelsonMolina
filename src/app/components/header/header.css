@@ -1,0 +1,37 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2C5F2D;
+  color: white;
+  padding: 20px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left .logo {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 25px;
+}
+
+.header-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-right a:hover {
+  color: #ffdce8;
+  text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+ <div class="about-text">
+    <h1>Proyectos</h1>
+</div>
+    
+    <div class="projects">
+      <div *ngFor="let proj of projects" class="project">
+        <h3>{{ proj.name }} ({{ proj.year }})</h3>
+        <p>{{ proj.desc }}</p>
+      </div>
+    </div>

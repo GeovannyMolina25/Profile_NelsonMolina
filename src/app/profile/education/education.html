@@ -1,0 +1,36 @@
+<div class="about-text">
+  <h1>Educación</h1>
+</div>
+<div class="animated-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+<div class="slider-container">
+  <button mat-icon-button (click)="prevCard()">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+  <mat-card class="education-card" *ngIf="educations[currentIndex]">
+    <img mat-card-image [src]="educations[currentIndex].img" alt="{{ educations[currentIndex].title }}">
+    <mat-card-header>
+      <mat-card-title>{{ educations[currentIndex].title }}</mat-card-title>
+      <mat-card-subtitle>{{ educations[currentIndex].degree }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ educations[currentIndex].description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Conocer más</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <button mat-icon-button (click)="nextCard()">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+<div class="animated-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>

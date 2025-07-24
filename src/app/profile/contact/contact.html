@@ -1,0 +1,31 @@
+<div class="about-text">
+  <h1>Contáctame</h1>
+</div>
+
+<p><strong>Email:</strong> geovannysangucho25@gmail.com</p>
+<p><strong>Teléfono:</strong> +593 998 628 996</p>
+<p><strong>Ubicación:</strong> Quito, Ecuador</p>
+
+<div class="links">
+  <a href="https://www.linkedin.com/in/tuPerfil" target="_blank">LinkedIn</a> |
+  <a href="https://github.com/tuUsuario" target="_blank">GitHub</a>
+</div>
+
+<form (ngSubmit)="enviarMensaje()" #formularioContacto="ngForm" class="contact-form">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+  </div>
+
+  <div>
+    <label for="email">Correo:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="email" required>
+  </div>
+
+  <div>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" [(ngModel)]="mensaje" required></textarea>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>
