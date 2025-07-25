@@ -1,10 +1,15 @@
-
+<div class="skills-container">
+  <!-- Columna izquierda: Descripción -->
+  <div class="skills-description">
     <h2>Tecnologías Aprendidas</h2>
     <p class="tech-description">
-  A lo largo de mi formación, he utilizado estas tecnologías en diversos proyectos universitarios y prácticos, así como en cursos especializados que me han permitido fortalecer mis habilidades en el desarrollo de software.
-</p>
+      A lo largo de mi formación, he utilizado estas tecnologías en diversos proyectos universitarios y prácticos,
+      así como en cursos especializados que me han permitido fortalecer mis habilidades en el desarrollo de software.
+    </p>
+  </div>
 
-
+  <!-- Columna derecha: Desplegables -->
+  <div class="skills-list">
     <h3>Backend / Lenguajes</h3>
     <ul>
       <li *ngFor="let tech of technologies.backend">{{ tech }}</li>
@@ -29,3 +34,5 @@
     <ul>
       <li *ngFor="let tech of technologies.databases">{{ tech }}</li>
     </ul>
+  </div>
+</div>

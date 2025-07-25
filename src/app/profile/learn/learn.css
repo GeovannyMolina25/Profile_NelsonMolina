@@ -1,35 +1,58 @@
-/* Título principal */
-.about-text h1 {
-  color: #2C5F2D;
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 2.2em;
-  font-weight: 700;
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
 }
 
-h2 {
-  color: #2C5F2D;
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.6em;
-  font-weight: 600;
+.skills-description {
+  flex: 1 1 40%;
+  max-width: 500px;
 }
 
-/* Sección de cada tarjeta */
-h3 {
+.skills-list {
+  flex: 1 1 55%;
+}
+
+/* Título de sección */
+.skills-description h2 {
+  color: #2C5F2D;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* Descripción estilizada */
+.tech-description {
+  text-align: left;
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #444;
+  font-style: italic;
+  background: #f3fdf4;
+  border-left: 5px solid #2C5F2D;
+  border-radius: 8px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cards desplegables (reutilizamos lo anterior) */
+.skills-list h3 {
   background: linear-gradient(90deg, #2C5F2D, #4C8C4A);
   color: white;
   padding: 16px 25px;
   margin: 30px 0 0;
   border-radius: 12px 12px 0 0;
   cursor: pointer;
-  font-size: 1.3em;
+  font-size: 1.2em;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: background 0.3s ease;
   position: relative;
+  transition: background 0.3s ease;
 }
 
-h3::after {
+.skills-list h3::after {
   content: '▼';
   position: absolute;
   right: 25px;
@@ -39,16 +62,15 @@ h3::after {
   transition: transform 0.3s ease;
 }
 
-h3:hover {
+.skills-list h3:hover {
   background: linear-gradient(90deg, #256025, #3f7a3f);
 }
 
-h3:hover::after {
+.skills-list h3:hover::after {
   transform: translateY(-50%) rotate(180deg);
 }
 
-/* Lista oculta por defecto */
-h3 + ul {
+.skills-list h3 + ul {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -58,27 +80,25 @@ h3 + ul {
   border-top: none;
   border-radius: 0 0 12px 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: max-height 0.6s ease, opacity 0.4s ease, padding 0.3s ease;
+  transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.3s ease;
 }
 
-/* Mostrar lista al pasar el mouse por el h3 */
-h3:hover + ul {
+.skills-list h3:hover + ul {
   max-height: 500px;
   opacity: 1;
   padding: 20px 25px;
 }
 
-/* Estilo de ítems de la lista */
-ul li {
+.skills-list ul li {
   margin: 10px 0;
   color: #2C5F2D;
-  font-size: 1.05em;
+  font-size: 1em;
   font-weight: 500;
   padding-left: 15px;
   position: relative;
 }
 
-ul li::before {
+.skills-list ul li::before {
   content: "✔";
   position: absolute;
   left: 0;
@@ -86,19 +106,24 @@ ul li::before {
   font-size: 0.9em;
 }
 
-.tech-description {
-  max-width: 800px;
-  margin: 0 auto 30px auto;
-  padding: 0 20px;
-  text-align: center;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #444;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-style: italic;
-  background: #f3fdf4;
-  border-left: 5px solid #2C5F2D;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  padding: 15px 25px;
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-description,
+  .skills-list {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .skills-description h2 {
+    text-align: center;
+  }
+
+  .tech-description {
+    text-align: justify;
+  }
 }
