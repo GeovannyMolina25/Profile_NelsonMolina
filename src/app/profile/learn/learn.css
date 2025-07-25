@@ -1,0 +1,54 @@
+/* Título principal */
+.about-text h1 {
+  color: #2C5F2D;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #2C5F2D;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Tarjetas por categoría */
+h3 {
+  background-color: #2C5F2D;
+  color: white;
+  padding: 12px 20px;
+  margin: 20px 0 0;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+h3:hover {
+  background-color: #1f3f1d;
+}
+
+/* Lista oculta por defecto */
+h3 + ul {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #dcdcdc;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+/* Mostrar lista cuando se hace hover sobre el h3 */
+h3:hover + ul {
+  max-height: 300px; /* ajusta según el contenido */
+  opacity: 1;
+  padding: 15px 20px;
+}
+
+/* Estilo de los ítems */
+ul li {
+  margin: 8px 0;
+  color: #333;
+  font-size: 16px;
+}
