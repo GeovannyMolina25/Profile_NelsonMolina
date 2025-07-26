@@ -5,6 +5,15 @@ body {
   background-color: #2c5f2d;
   color: #f1f1f1;
 }
+.about-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  color: #2C5F2D;
+}
 
 .contact-wrapper {
   display: flex;

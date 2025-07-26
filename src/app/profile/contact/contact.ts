@@ -64,7 +64,7 @@ export class ContactComponent implements OnInit {
       'TU_SERVICE_ID',
       'TU_TEMPLATE_ID',
       templateParams,
-      'TU_USER_ID' // API public key
+      'TU_USER_ID'
     )
     .then(
       (response) => {

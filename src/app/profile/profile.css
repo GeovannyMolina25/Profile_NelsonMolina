@@ -105,3 +105,22 @@
 
 /*--------------------- ESTILOS --------------------*/
 
+.decorative-lines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decorative-lines.bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.about-container {
+  position: relative;
+  z-index: 1;
+}
