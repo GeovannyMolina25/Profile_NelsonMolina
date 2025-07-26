@@ -71,6 +71,18 @@
   background-color: #c2185b;
 }
 
+.fade-animation {
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 
 /* ----------- Estrellas Hexagonales Animadas ----------- */
@@ -107,20 +119,10 @@
 
 .decorative-lines {
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
   width: 200px;
   height: 100%;
-  pointer-events: none;
   z-index: 0;
-}
-
-.decorative-lines.bottom {
-  top: auto;
-  bottom: 0;
-}
-
-.about-container {
-  position: relative;
-  z-index: 1;
+  pointer-events: none;
 }
