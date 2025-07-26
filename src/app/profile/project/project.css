@@ -67,7 +67,7 @@
 
 .btn-todos {
   display: block;
-  margin: 40px auto 0;
+  margin: 10px auto 0;
   padding: 16px;
   width: 100%;
   max-width: 600px;
@@ -84,4 +84,33 @@
 .btn-todos:hover {
   border-color: #c2185b;
   color: #c2185b;
+}
+
+/* ----------- Estrellas Hexagonales Animadas ----------- */
+
+.hexagon {
+  position: absolute;
+  width: 20px;
+  height: 17.32px; /* width * sqrt(3)/2 */
+  background-color: #e91e63;  /* rojo pastel */
+  opacity: 0.8;
+  clip-path: polygon(
+    25% 0%, 75% 0%, 
+    100% 50%, 75% 100%, 
+    25% 100%, 0% 50%
+  );
+  animation-name: fall-hex;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall-hex {
+  0% {
+    transform: translateY(-30px) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(850px) rotate(360deg);
+    opacity: 0;
+  }
 }
